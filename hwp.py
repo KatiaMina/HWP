@@ -1,7 +1,7 @@
 """Let's do work!"""
 
 from datetime import date, timedelta, datetime
-from tables import *
+from astrophy.table import Table, Column
 import numpy as np 
 
 d = datetime(1,1,1,1,1,1)
@@ -16,7 +16,7 @@ group = File.create_group("/", User, "Log Tables")
 class Event(object):
 #List of days, numeric time#
 	days = ['SU', 'M', 'T', 'W', 'TH', 'F', 'SA']
-	times = [0, 0, 0, 0, 0, 0, 0]
+	times = [-1, -1, -1, -1, -1]
 
 	def __init__(self, datetime):
 		self.days=days
